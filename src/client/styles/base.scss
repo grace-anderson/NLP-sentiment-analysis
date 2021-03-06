@@ -1,0 +1,25 @@
+$font-stack: "Jura", sans-serif;
+$primary-color: #f6f4e6;
+$secondary-color: #41444b;
+$highlight-color: #fddb3a;
+$base-color: #e6f6f2;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: $base-color;
+}
+
+main {
+  flex: 2;
+}
+
+section {
+  max-width: 800px;
+  margin: 50px auto;
+}
