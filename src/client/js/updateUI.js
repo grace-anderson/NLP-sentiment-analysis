@@ -8,10 +8,9 @@ function updateUI(data) {
   if (data.status.code === "0") {
     resultsHTML = `
                 <div>
-                <h1>Our analysis show that:</h1>
-                <p><i class="fas fa-hand-point-right"></i>The polarity of different elements of the text are in <span>${data.agreement.toLowerCase()}</span></p>
-                <p><i class="fas fa-hand-point-right"></i>The text is prevalently <span>${data.subjectivity.toLowerCase()}</span> and <span>${data.irony.toLowerCase()}</span></p>
-                <p><i class="fas fa-hand-point-right"></i>We are <span>${data.confidence.toLowerCase()}%</span> confident about these resulst</p>
+                <h1>Our analysis:</h1>
+                <p><i class="fas fa-hand-point-right"></i>The text is in <span>${data.agreement.toLowerCase()}</span> consisting of <span>${data.subjectivity.toLowerCase()}</span> and <span>${data.irony.toLowerCase()}</span>elements.</p>
+                <p><i class="fas fa-hand-point-right"></i>We have <span>${data.confidence.toLowerCase()}%</span> confidence in these results</p>
                 </div>`;
   } else {
     resultsHTML = `
@@ -23,7 +22,7 @@ function updateUI(data) {
                 </div>`;
   }
 
-  //add resultsHTML to DOM
+  //add results to DOM
   results.insertAdjacentHTML("beforeend", resultsHTML);
 }
 
